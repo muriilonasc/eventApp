@@ -1,0 +1,58 @@
+import { View, Text, StyleSheet} from 'react-native';
+
+
+export default function EventCards(){
+  return(
+    <View style={styles.card}>
+    <Text>EVENTO</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  card:{
+    backgroundColor: 'white',
+    padding: 50,
+    alignItems: 'top',
+    borderRadius: '30px',
+    borderColor: 'black',
+    borderWidth: 2,
+    margin:10,
+    display: 'flex',
+    justifyContent: 'start'
+     }
+});
+------------------------------------------------------------------------------------
+
+
+
+import { Text, SafeAreaView, StyleSheet } from 'react-native';
+
+// You can import supported modules from npm
+import { Card } from 'react-native-paper';
+
+// or any files within the Snack
+import AssetExample from './components/AssetExample';
+import EventCards from './components/EventCards';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <EventCards />
+      <EventCards />
+      <EventCards />
+      <EventCards />
+      <EventCards />
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+ 
+});
